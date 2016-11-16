@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情与收货地址</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/public.css"/>
+    <script type="text/javascript" src="../public/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../public/jquery.fly.js"></script>
+    <script type="text/javascript" src="../public/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../public/commonCookie.js"></script>
+    <script type="text/javascript" src="js/j1.js"></script>
+    <script type="text/javascript" src="js/jj.js"></script>
+    <script type="text/javascript" src="js/Ajax.js"></script>
+
+</head>
+<body>
+<!--头部-->
+<div id="top">
+    <div class="top margin">
+        <div class="login">
+            您好,
+            <div style="display:inline-block" id="change">
+                <a id="denglu" href="../login_06/login.html">请登录</a>
+                <a id="zhuce" href="../register/register.html">免费注册</a>
+            </div>
+            <span>|</span>
+            <a id="shangjia" href="#">商家中心</a>
+            <span>|</span>
+            <a id="lianxi" href="#"><img src="img/ren.jpg"/>联系客服
+                <div id="ption_1"><img src="img/ren.jpg"/>帮助中心</div>
+            </a>
+            <span>|</span>
+            <a id="guanzhu" href="#">关注
+                <div id="ption_2"><img src="img/ma.png"/></div>
+            </a>
+
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div id="logo">
+    <div class="logo margin">
+        <a href="../index_01/index.html"><img src="img/logo.jpg"/></a>
+        <div>
+            <a href="#"><img src="img/logo1.jpg"/></a>
+            <a href="#"><img src="img/logo2.jpg"/></a>
+            <a href="#"><img src="img/logo3.jpg"/></a>
+            <a href="#"><img src="img/gouwuche.jpg"/></a>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div id="nav">
+    <div class="nav margin">
+        <ul id="u1">
+            <li class="first"><a href="#">首页</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">限量购</a></li>
+            <li><a href="#">正品保证</a></li>
+            <li><a href="#">手机客户端</a></li>
+        </ul>
+        <form>
+            <input id="search" style="color:#666;font-size:12px;" type="text" placeholder="搜索商品和品牌"/>
+            <img id="s1" src="img/search.jpg">
+            <img id="s2" src="img/s2.png">
+        </form>
+        <div id="json_fl">
+            <a id="fenlei" href="#">在售分类 <img src="img/xia.jpg"/></a>
+            <div id="msg">
+                <ul id="msg_l"></ul>
+                <ul id="msg_r"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主要-->
+<div id="main_content">
+    <div class="your_order">
+        <!--标题-->
+        <div class="yo_title">
+            <h1>确认订单</h1>
+        </div>
+        <h3 class="chooseyourAddress">选择收货地址<a href="javascript:void(0);">管理收货地址</a></h3>
+        <!--添加、选择收货地址-->
+        <div class="addAddress">
+            <ul class="ad_address">
+                <li style="display: none;" class="new_address">
+                    <div class="middel_conte">
+                        <div class="address_nam">
+                            <span class="get_name"></span>
+                            <span class="phone"></span>
+                            <span class="default_style"></span>
+                        </div>
+                        <div class="show_user_address">
+                            <strong>寄送至</strong>
+                            <span class="address_one"></span>
+                            <span class="address_two"></span>
+                            <span class="address_three"></span>
+                            <span class="address_delita"></span>
+                        </div>
+                        <div class="address_footer"><a href="" class="remove">修改</a></div>
+                    </div>
+                </li>
+                <li id="new_address">
+                    <a href="javascript:void(0);">
+                        添加新地址
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h3 class="chooseyourAddress">确认订单信息</h3>
+        <!--订单信息-->
+        <div class="cart_list">
+            <table border="1" cellspacing="" cellpadding="" class="table_style">
+                <thead>
+                <tr>
+                    <th>商品</th>
+                    <th>商品信息</th>
+                    <th>单价(元)</th>
+                    <th>数量</th>
+                    <th>小计(元)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="no_word"></tr>
+                <tr class="event_entry">
+                    <td colspan="5">
+                        <div class="event-remark">
+                            <span>交易备注：</span>
+                            <input type="text" placeholder="选填，可告诉商家您的特殊要求"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="list"></tr>
+                </tbody>
+            </table>
+            <div class="no_goods">您还没有任何的购物订单，快去抢购吧！</div>
+            <div class="total">
+                <div class="allprice_small">运费:<span>0.00</span></div>
+                <div class="allPrice">活动优惠:<span>0.00</span></div>
+                <div class="to_order">订单总计:<span class="changePrice"></span></div>
+            </div>
+            <h3 class="chooseyourAddress">选择支付方式<span>﹡推荐使用支付宝平台支付， 安全快捷</span></h3>
+            <div class="account-list">
+                <ul class="cash_balance">
+                    <li><input type="radio" name="buy" checked="checked"/>
+                        <div class="deposit"><img src="img/buy1.png" alt="" /></div>
+                    </li>
+                    <li><input type="radio" name="buy"/>
+                        <div class="deposit"><img src="img/buy2.png" alt="" /></div>
+                    </li>
+                    <li><input type="radio" name="buy"/>
+                        <div class="deposit"><img src="img/buy3.jpg" alt="" /></div>
+                    </li>
+                </ul>
+                <div class="confirm">
+                    <div class="pay-confirm">
+                        <span class="use">使用&nbsp;<span class="choose_show">支付平台(支付宝)</span>&nbsp;支付</span>&nbsp;￥<span class="show_buy_price"></span>
+                    </div>
+                    <div class="submit-order">
+                        <p class="show_usreName">
+										<span class="al_right">寄送至：
+											<span class="address_1"></span>
+											<span class="address_2"></span>
+											<span class="address_3"></span>
+											<span class="address_4"></span>
+                                            <span class="address_5"></span>
+                                            <span class="address_6"></span>
+										</span>
+                        </p>
+                        <p>
+										<span class="al_right" style="color: #555">
+											<span class="name_1"></span>
+											<span class="name_2"></span>
+										</span>
+                        </p>
+                    </div>
+                    <a href="javascript: void(0);" class="sure">确认并支付</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--表单-->
+<div class="back"></div>
+<form action="" method="post" class="form_list margin">
+    <div class="form_main">
+        <div class="fm_title">
+            <span class="fm_color">新增收货地址</span>&nbsp;&nbsp; 请如实填写，确保商品发往正确的地址
+        </div>
+        <div class="form_main2">
+            <span class="formm_title">所在地<span class="formm_sign">*</span></span>
+            <select name="loc_province" id="loc_province"></select>
+            <select name="loc_city" id="loc_city"></select>
+            <select name="loc_town" id="loc_town"></select>
+            <!--<input type="button" name="btnval" id="btntext" value="获取地址" />
+            <p id="msg"></p>-->
+        </div>
+        <!--<div class="action_nowrite" id="action1"></div>-->
+        <div class="detail_address">
+            <span class="formm_title">详细地址<span class="formm_sign">*</span></span>
+            <!--placeholder="不需要重复填写省市区，必须大于5个字符， 小于120个字符"-->
+            <textarea name="textarea1" id="formm_content" >水产路199号，千峰</textarea>
+        </div>
+        <!--<div class="action_nowrite" id="action2"></div>-->
+        <div class="zip_code">
+            <span class="formm_title">邮政编码<span class="formm_sign">*</span></span>
+            <input type="text" class="zip_2" id="zip" value="200000"/>
+        </div>
+        <!--<div class="action_nowrite" id="action3"></div>-->
+        <div class="username">
+            <span class="formm_title">收货人姓名<span class="formm_sign">*</span></span>
+            <input type="text" class="zip_2" id="nr" value="张权益"/>
+        </div>
+        <!--<div class="action_nowrite" id="action4"></div>-->
+        <div class="username usernumber">
+            <span class="formm_title">手机号码<span class="formm_sign">*</span></span>
+            <input type="text" class="zip_2" id="nb" value="15662181116"/>
+        </div>
+        <!--<div class="action_nowrite" id="action5"></div>-->
+        <div class="default_block">
+            <span class="default_content"><input type="radio" id="default_cot" checked="checked"/>&nbsp;设为默认</span>
+        </div>
+        <div class="confirm_finish">
+            <a href="javascript:void(0);" class="cf_bnt" id="btntext">确&nbsp;定</a>
+        </div>
+    </div>
+</form>
+
+<!--底部-->
+<div id="foot">
+    <div class="foot margin">
+        <ul class="u3">
+            <li><a href="">首页</a></li>
+            <li><a href="">关于贝贝</a></li>
+            <li><a href="">商家入驻</a></li>
+            <li><a href="">正品保证</a></li>
+            <li><a href="">人才招聘</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">手机客户端</a></li>
+            <li><a href="">客服在线</a></li>
+            <li class="last"><a href="">贝贝公益</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="bottom">
+    <p>浙ICP备12005806号 |
+        食品流通许可证：SP3301041510054925 |
+        出版物经营许可证：新出发零字第00086号</p>
+    <p>&copy;2014-2015
+        <a href="#">贝贝</a>
+        beibei.com，All Rights Reserved. 客服热线：400-668-0000</p>
+</div>
+<!--返回顶部-->
+<div class="toTop">
+    <ul>
+        <li>购物车(0)
+            <span class="first nochange"><i class="fa fa-shopping-cart fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound shoppingCar_top">
+                    <div class="shoppingCarTop">
+                        <i class="fa fa-shopping-cart fa-lg" style="color: #FF5482;"></i>
+                        购物车是空的
+                    </div>
+                    <div class="shoppingCarCenter">赶快去挑选商品吧！</div>
+                    <div class="shoppingCarFooter">
+                        <p>小计:<span><b>￥0.00</b></span></p>
+                        <div class="buy_car">
+                            <i class="fa fa-shopping-cart fa-lg" style="color: #fff;"></i>
+                            <a href="#" style="color: #fff;">去购物车结算</a>
+                        </div>
+                    </div>
+                </span>
+        </li>
+        <li>app
+            <span class="first nochange"><i class="fa fa-phone-square fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound app">
+                    <p>下载手机APP</p>
+                    <p>随时随地看上新</p>
+                    <img src="img/erwe.png"/>
+                </span>
+        </li>
+        <li><span class="first"><i class="fa fa-user fa-lg" style="color: #ff6473;">客服在线</i></span><span class="secound">客服在线</span></li>
+        <li><span class="first"><i class="fa fa-chevron-up fa-lg" style="color: #ff6473;">回到顶部</i></span><span class="secound">回到顶部</span></li>
+    </ul>
+</div>
+
+
+</body>
+</html>

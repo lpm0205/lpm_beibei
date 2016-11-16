@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/public.css"/>
+    <script type="text/javascript" src="../public/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../public/jquery.fly.js"></script>
+    <script type="text/javascript" src="../public/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../public/commonCookie.js"></script>
+    <script type="text/javascript" src="js/j1.js"></script>
+    <script type="text/javascript" src="js/jj.js"></script>
+    <script type="text/javascript" src="js/Ajax.js"></script>
+
+</head>
+<body>
+<!--头部-->
+<div id="top">
+    <div class="top margin">
+        <div class="login">
+            您好,
+            <div style="display:inline-block" id="change">
+                <a id="denglu" href="../login_06/login.html">请登录</a>
+                <a id="zhuce" href="../register/register.html">免费注册</a>
+            </div>
+            <span>|</span>
+            <a id="shangjia" href="#">商家中心</a>
+            <span>|</span>
+            <a id="lianxi" href="#"><img src="img/ren.jpg"/>联系客服
+                <div id="ption_1"><img src="img/ren.jpg"/>帮助中心</div>
+            </a>
+            <span>|</span>
+            <a id="guanzhu" href="#">关注
+                <div id="ption_2"><img src="img/ma.png"/></div>
+            </a>
+
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div id="logo">
+    <div class="logo margin">
+        <a href="../index_01/index.html"><img src="img/logo.jpg"/></a>
+        <div>
+            <a href="#"><img src="img/logo1.jpg"/></a>
+            <a href="#"><img src="img/logo2.jpg"/></a>
+            <a href="#"><img src="img/logo3.jpg"/></a>
+            <a href="#"><img src="img/gouwuche.jpg"/></a>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div id="nav">
+    <div class="nav margin">
+        <ul id="u1">
+            <li class="first"><a href="#">首页</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">限量购</a></li>
+            <li><a href="#">正品保证</a></li>
+            <li><a href="#">手机客户端</a></li>
+        </ul>
+        <form>
+            <input id="search" style="color:#666;font-size:12px;" type="text" placeholder="搜索商品和品牌"/>
+            <img id="s1" src="img/search.jpg">
+            <img id="s2" src="img/s2.png">
+        </form>
+        <div id="json_fl">
+            <a id="fenlei" href="#">在售分类 <img src="img/xia.jpg"/></a>
+            <div id="msg">
+                <ul id="msg_l"></ul>
+                <ul id="msg_r"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主要-->
+<div id="main">
+    <div id="body">
+        <div id="step">
+            <h1>我的购物车</h1>
+        </div>
+        <div id="no_good">
+            <p class="title">你的购物车还是空的,赶快去挑选商品吧</p>
+            <p class="middle">
+                <a style="color:#2a9ad2;" href="../list_04/list.html">去看看正在特卖中的品牌商品 ></a>
+            </p>
+            <p class="foot">
+                <a href="buy.html">刷新我的购物车</a>
+            </p>
+        </div>
+        <div id="has_good">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>商品</th>
+                        <th>商品详情</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计（元）</th>
+                        <th>操作</th>
+                     </tr>
+
+                </thead>
+                <tbody>
+                    <tr class="blink"></tr>
+                    <!--<tr class="lab">
+                        <td class="t_first">
+                            <input class="cbox" type="checkbox" checked="checked"/>
+                        </td>
+                        <td class="t_second">
+                            <div class="td_img">
+                                    <img src="img/small1.jpg"/>
+                            </div>
+                            <a href="../list_04/list.html">恩恩熊2015女童针织毛衣宝宝百搭开衫女婴儿童薄款毛衣90042</a>
+                        </td>
+                        <td class="t_third">
+                            尺寸：100<br/>
+                            颜色：灰色
+                        </td>
+                        <td class="t_fourth">
+                            49:00
+                        </td>
+                        <td class="t_fiveth">
+
+                                <span class="sub">-</span>
+                                <span class="num"></span>
+                                <span class="add">+</span>
+
+                        </td>
+                        <td class="t_sixth"></td>
+                        <td class="t_seventh">
+                            <a href="javascript:void(0);">删除</a>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+            <div class="total">
+                <span class="allprice_small">总计(不含运费)：</span>
+                <span class="allPrice">￥<span class="changePrice"></span></span>
+                <a href="../address/address.html" class="to_order">确认订单</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="foot">
+    <div class="foot margin">
+        <ul class="u3">
+            <li><a href="">首页</a></li>
+            <li><a href="">关于贝贝</a></li>
+            <li><a href="">商家入驻</a></li>
+            <li><a href="">正品保证</a></li>
+            <li><a href="">人才招聘</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">手机客户端</a></li>
+            <li><a href="">客服在线</a></li>
+            <li class="last"><a href="">贝贝公益</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="bottom">
+    <p>浙ICP备12005806号 |
+        食品流通许可证：SP3301041510054925 |
+        出版物经营许可证：新出发零字第00086号</p>
+    <p>&copy;2014-2015
+        <a href="#">贝贝</a>
+        beibei.com，All Rights Reserved. 客服热线：400-668-0000</p>
+</div>
+
+
+</body>
+</html>

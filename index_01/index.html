@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/public.css"/>
+    <script type="text/javascript" src="../public/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../public/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../public/commonCookie.js"></script>
+    <script type="text/javascript" src="js/j1.js"></script>
+    <script type="text/javascript" src="js/jj.js"></script>
+    <script type="text/javascript" src="js/Ajax.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div id="top">
+        <div class="top margin">
+            <div class="login">
+                您好,
+                <div style="display:inline-block" id="change">
+                    <a id="denglu" href="../login_06/login.html">请登录</a>
+                    <a id="zhuce" href="../register/register.html">免费注册</a>
+                </div>
+                <span>|</span>
+                <a id="shangjia" href="#">商家中心</a>
+                <span>|</span>
+                <a id="lianxi" href="#"><img src="img/ren.jpg"/>联系客服
+                    <div id="ption_1"><img src="img/ren.jpg"/>帮助中心</div>
+                </a>
+                <span>|</span>
+                <a id="guanzhu" href="#">关注
+                    <div id="ption_2"><img src="img/ma.png"/></div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!--logo-->
+    <div id="logo">
+        <div class="logo margin">
+            <a href="../index_01/index.html"><img src="img/logo.jpg"/></a>
+            <div>
+                <a href="#"><img src="img/logo1.jpg"/></a>
+                <a href="#"><img src="img/logo2.jpg"/></a>
+                <a href="#"><img src="img/logo3.jpg"/></a>
+                <a href="#"><img src="img/gouwuche.jpg"/></a>
+            </div>
+        </div>
+    </div>
+    <!--nav-->
+    <div id="nav">
+        <div class="nav margin">
+            <ul id="u1">
+                <li class="first"><a href="../index_01/index.html">首页</a></li>
+                <li><a href="#">全球购</a></li>
+                <li><a href="#">限量购</a></li>
+                <li><a href="#">正品保证</a></li>
+                <li><a href="#">手机客户端</a></li>
+            </ul>
+            <form>
+                <input id="search" style="color:#666;font-size:12px;" type="text" placeholder="搜索商品和品牌"/>
+                <img id="s1" src="img/search.jpg">
+                <img id="s2" src="img/s2.png">
+            </form>
+            <div id="json_fl">
+                <a id="fenlei" href="#">在售分类 <img src="img/xia.jpg"/></a>
+                <div id="msg">
+                    <ul id="msg_l"></ul>
+                    <ul id="msg_r"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--nav1-->
+    <div id="nav1">
+        <div class="nav1 margin">
+            <ul id="u2">
+                <li><a href="#">童装</a></li>
+                <li><a href="#">童鞋</a></li>
+                <li><a href="#">用品</a></li>
+                <li><a href="#">玩具</a></li>
+                <li><a href="#">女装</a></li>
+                <li><a href="#">居家</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">美妆</a></li>
+                <li><a href="#">奶粉</a></li>
+                <li style="position:relative"><a href="#">纸尿裤</a>
+                    <img style="position:absolute;left:56px;top:4px;" src="img/hot.jpg"/>
+                </li>
+            </ul>
+            <div id="age">
+                <span>性别年龄</span>
+                <div id="age_div">
+                    <h5>男孩</h5>
+                    <p>
+                        <a href="#">0-1岁</a>
+                        <a href="#">1-3岁</a>
+                        <a href="#">3-6岁</a>
+                        <a href="#">6-9岁</a>
+                        <a href="#">9-12岁</a>
+                    </p>
+                    <h5>女孩</h5>
+                    <p>
+                        <a href="#">0-1岁</a>
+                        <a href="#">1-3岁</a>
+                        <a href="#">3-6岁</a>
+                        <a href="#">6-9岁</a>
+                        <a href="#">9-12岁</a>
+                    </p>
+                </div>
+            </div>
+            <div id="jc"><span>精彩预告</span></div>
+        </div>
+    </div>
+    <!--banner-->
+    <div id="banner">
+        <div class="banner">
+            <img id="lunbo" src="img/banner0.jpg"/>
+
+            <ul id="po">
+                <li><a href="#"><img src="img/li.jpg"/></a></li>
+                <li><a href="#"><img src="img/li2.jpg"/></a></li>
+                <li><a href="#"><img src="img/li3.jpg"/></a></li>
+                <li><a href="#"><img src="img/li4.jpg"/></a></li>
+            </ul>
+            <div id="list">
+                <p class="p_1"></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!--main-->
+    <div id="main">
+        <div class="main margin">
+            <!--今日特卖标题-->
+            <div class="m_title">
+                <b style="color:#666666;font-size:20px;font-weight: 700;">今日特卖·</b>
+                <span style="color:#666666;font-size:18px;">每天9点准时上新</span>
+                <span style="position:absolute;right:272px;top:25px;">定制我的专属特卖，立即<a style="color:#4bc1d2;" href="../login_06/login.html">[登录]</a>体验</span>
+            </div>
+            <div id="product">
+
+            </div>
+            <div id="p_r_first">
+                <div class="t">
+                    <span id="youxuan">今日优选</span>
+                    <span id="yugao" style="margin-left:54px;">精彩预告</span>
+                </div>
+                <ul id="youxuan_ul">
+                    <li class="jishu"><a href="#"><img src="img/e1.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e3.png"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e4.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e5.png"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e6.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e7.png"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e8.png"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e9.jpg"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e10.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e3.png"></a></li>
+                </ul>
+                <ul id="yugao_ul" style="display:none;">
+                    <li class="jishu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="jishu"><a href="#"><img src="img/e2.jpg"></a></li>
+                    <li class="oushu"><a href="#"><img src="img/e2.jpg"></a></li>
+                </ul>
+                <div id="more_pro"><a href="#">更多在售品牌 > </a></div>
+            </div>
+            <!--小的轮播图-->
+            <div class="small_banner">
+                <ul class="small_banner_change">
+                    <li>
+                        <a href="" class="img_part">
+                            <img src="img/small_banner1.jpg" alt="" />
+                        </a>
+                        <a href="" class="word_part">
+                            <i class="fa fa-plane fa-lg" style="color: #7F4DBC"></i>
+                            <span>[全球购]MOONY纸尿裤</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="img_part">
+                            <img src="img/small_banner2.jpg" alt="" />
+                        </a>
+                        <a href="" class="word_part">
+                            <i class="fa fa-plane fa-lg" style="color: #7F4DBC"></i>
+                            <span>[全球购]牛栏-健康奶牛 纯净奶源</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="img_part">
+                            <img src="img/small_banner3.jpg" alt="" />
+                        </a>
+                        <a href="" class="word_part">
+                            <i class="fa fa-plane fa-lg" style="color: #7F4DBC"></i>
+                            <span>[全球购]博朗-1秒红外线快速测温</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="last">&lt;</span>
+                <span class="next">&gt;</span>
+            </div>
+
+            <div id="p_r_second">
+                <div id="remai">
+                    <img src="img/remai.jpg"/>&nbsp;&nbsp;&nbsp;
+                    热卖排行榜
+                </div>
+                <ul id="remai_ul">
+                    <li style="background: #fff;">童装</li>
+                    <li>童鞋</li>
+                    <li>玩具</li>
+                    <li style="border:0;">用品</li>
+                </ul>
+                <div class="tz tongzhuang_div">
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                </div>
+                <div style="display: none;" class="tz tongxie_div">
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu2.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu2.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu2.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu2.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu2.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu2.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                </div>
+                <div style="display: none;" class="tz wanju_div">
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu3.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu3.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu3.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu3.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu3.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu3.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                </div>
+                <div style="display: none;" class="tz yongpin_div">
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu4.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu4.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu4.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu4.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu4.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                    <a class="c_item" href="#">
+                        <img style="float:left;margin-right:10px;" src="img/yifu4.jpg"/>
+                        <p style="font-size:12px;color:#3e3e3e;">KT猫 宝宝必备 韩范气质</p>
+                        <p style="font-size:12px;color:#3e3e3e;">淑女兔耳朵款大卫衣</p>
+                        <span style="color:#ff5482;font-size:14px">￥45.00</span>
+                        <span style="color:#a5a5a5;font-size:12px;text-decoration: line-through;">￥288</span>
+                        <div class="clear"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:#f9f9f9;;">
+        <img style="display:block;margin:0 auto;" src="img/donghua.jpg"/>
+    </div>
+    <!--底部-->
+    <div id="tip">
+        <div class="tip">
+            <ul id="uu">
+                <li class="one li_1">
+                    <ul>
+                        <li style="font-size:14px;background:url(img/b_1.jpg) no-repeat 20px;">新手指南</li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">注册登录</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">抢购商品</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">购物车操作</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">下单支付</a><li>
+
+                    </ul>
+                </li>
+                <li class="one">
+                    <ul>
+                        <li style="font-size:14px;background:url(img/b_2.jpg) no-repeat 20px;">常见问题</li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">热门常见问题</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">账号管理</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">支付相关</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">平台交易规则</a><li>
+
+                    </ul>
+                </li>
+                <li class="one">
+                    <ul>
+                        <li style="font-size:14px;background:url(img/b_3.jpg) no-repeat 20px;">账号管理</li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">会员注册</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">密码管理</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">投诉举报</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">不良信息处理</a><li>
+
+                    </ul>
+                </li>
+                <li class="one">
+                    <ul>
+                        <li style="font-size:14px;background:url(img/b_4.jpg) no-repeat 20px;">支付相关</li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">在线支付</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">余额支付</a><li>
+                    </ul>
+                </li>
+                <li class="one">
+                    <ul>
+                        <li style="font-size:14px;background:url(img/b_5.jpg) no-repeat 20px;">配送相关</li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">配送说明</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">物流信息</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">验货签收</a><li>
+                    </ul>
+                </li>
+                <li class="one">
+                    <ul>
+                        <li style="font-size:14px;background:url(img/b_6.jpg) no-repeat 20px;">消费者保障</li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">退货发货</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">退货流程</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">退货方式和时效</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">交易安全保障</a><li>
+                        <li style="font-size:12px;background:url(img/list.jpg) no-repeat 28px;"><a href="#">保证金制度</a><li>
+
+                    </ul>
+                </li>
+                <li class="one li_n">
+                    <div>
+                        <img style="float:left;margin-right:14px;" src="img/erweima.jpg"/>
+                        <p><a style="color:#f34660" href="#">关注社区</a></p>
+                        <p style="color:#666;margin-bottom:10px;">优惠特卖早知道</p>
+                        <img src="img/d_1.jpg"/>
+                        <img src="img/d_2.jpg"/>
+                    </div>
+                </li>
+            </ul>
+            <div id="tip_2">
+                <div class="tip_2_1">
+                    <img style="float:left;" src="img/c_1.jpg">
+                    <p>正品保证</p>
+                    <p>商品均有中国人保承担</p>
+                </div>
+                <div class="tip_2_1">
+                    <img style="float:left;" src="img/c_2.jpg">
+                    <p>正品保证</p>
+                    <p>商品均有中国人保承担</p>
+                </div>
+                <div class="tip_2_1">
+                    <img style="float:left;" src="img/c_3.jpg">
+                    <p>正品保证</p>
+                    <p>商品均有中国人保承担</p>
+                </div>
+                <div class="tip_2_1">
+                    <img style="float:left;" src="img/c_4.jpg">
+                    <p>正品保证</p>
+                    <p>商品均有中国人保承担</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="foot">
+        <div class="foot margin">
+            <ul class="u3">
+                <li><a href="">首页</a></li>
+                <li><a href="">关于贝贝</a></li>
+                <li><a href="">商家入驻</a></li>
+                <li><a href="">正品保证</a></li>
+                <li><a href="">人才招聘</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">友情链接</a></li>
+                <li><a href="">手机客户端</a></li>
+                <li><a href="">客服在线</a></li>
+                <li class="last"><a href="">贝贝公益</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="bottom">
+        <p>浙ICP备12005806号 |
+            食品流通许可证：SP3301041510054925 |
+            出版物经营许可证：新出发零字第00086号</p>
+        <p>&copy;2014-2015
+            <a href="#">贝贝</a>
+            beibei.com，All Rights Reserved. 客服热线：400-668-0000</p>
+    </div>
+    <!--返回顶部-->
+
+    <div class="toTop">
+        <ul>
+            <li>购物车(0)
+                <span class="first nochange"><i class="fa fa-shopping-cart fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound shoppingCar_top">
+                    <div class="shoppingCarTop">
+                        <i class="fa fa-shopping-cart fa-lg" style="color: #FF5482;"></i>
+                        购物车是空的
+                    </div>
+                    <div class="shoppingCarCenter">赶快去挑选商品吧！</div>
+                    <div class="shoppingCarFooter">
+                        <p>小计:<span><b>￥0.00</b></span></p>
+                        <div class="buy_car">
+                            <i class="fa fa-shopping-cart fa-lg" style="color: #fff;"></i>
+                            <a href="#" style="color: #fff;">去购物车结算</a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+            <li>app
+                <span class="first nochange"><i class="fa fa-phone-square fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound app">
+                    <p>下载手机APP</p>
+                    <p>随时随地看上新</p>
+                    <img src="img/erwe.png"/>
+                </span>
+            </li>
+            <li><span class="first"><i class="fa fa-user fa-lg" style="color: #ff6473;">客服在线</i></span><span class="secound">客服在线</span></li>
+            <li><span class="first"><i class="fa fa-chevron-up fa-lg" style="color: #ff6473;">回到顶部</i></span><span class="secound">回到顶部</span></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

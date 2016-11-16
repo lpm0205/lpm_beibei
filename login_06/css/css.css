@@ -1,0 +1,196 @@
+.top{
+    width:1080px;
+    height:90px;
+    margin-top:52px;
+    line-height: 90px;
+}
+.top a{
+    float:right;
+    margin-left:20px;
+}
+.top #logo{
+    float:left;
+}
+
+.main{
+    width:1080px;
+    margin-top:113px;
+}
+.main .picture{
+    float:left;
+}
+.main .denglu{
+    padding:50px 35px;
+    width:330px;
+    border:1px solid #ececec;
+    border-top:2px solid #ff4965;
+    float:right;
+}
+.main .denglu .first{
+    height:21px;
+    line-height:21px;
+    width:100%;
+    margin-bottom:30px;
+}
+.main .denglu .first b{
+    font-size:16px;
+    color:#000;
+    float:left;
+}
+.main .denglu .first span a{
+    float:right;
+    color:#ff4965;
+}
+.main .denglu .first span{
+    float:right;
+    font-size:12px;
+    color:#000;
+}
+.main .denglu .second label{
+    position:relative;
+    border-radius: 2px;
+    padding-left:30px;
+    border:1px solid #e6e6e6;
+    display:block;
+}
+.main .denglu .second label span{
+    width:14px;
+    height:14px;
+    display:inline-block;
+    position:absolute;
+    left:8px;
+    top:8px;
+    background:url(../img/1.jpg) no-repeat;
+    padding-right:7px;
+    border-right:1px solid #e6e6e6;
+}
+.main .denglu .second label #name{
+    border:0;
+    height:30px;
+    font:12px/30px "";
+    width:278px;
+    color:#666;
+    padding:0 10px;
+}
+.main .denglu .third label{
+    margin-top:15px;
+    position:relative;
+    border-radius: 2px;
+    padding-left:30px;
+    border:1px solid #e6e6e6;
+    display:block;
+}
+.main .denglu .third label span{
+    width:14px;
+    height:14px;
+    display:inline-block;
+    position:absolute;
+    left:8px;
+    top:8px;
+    background:url(../img/2.jpg) no-repeat;
+    padding-right:7px;
+    border-right:1px solid #e6e6e6;
+}
+.main .denglu .third label #psw{
+    border:0;
+    height:30px;
+    font:12px/30px "";
+    width:278px;
+    color:#666;
+    padding:0 10px;
+}
+
+.main .denglu .fourth{
+    width:100%;
+    height:32px;
+    margin-top:15px;
+    background:#eee;
+}
+
+.main .denglu .fiveth{
+    width:100%;
+    height:18px;
+    margin-top:15px;
+    line-height:18px;
+    color:#000;
+}
+.main .denglu .fiveth a{
+    float:right;
+    color:#ff4965;
+}
+
+.main .denglu .sixth{
+    width:100%;
+    margin-top:15px;
+    border-radius: 3px;
+}
+.main .denglu .sixth a{
+    display:block;
+    height:32px;
+    background:#ff4965;
+    color:#fff;
+    text-align:center;
+    font:14px/32px "";
+    border-radius: 3px;
+}
+
+.main .denglu .seventh{
+    height:24px;
+    width:100%;
+    margin-top:15px;
+
+}
+.main .denglu .seventh span{
+    display:inline-block;
+    height:100%;
+    color:#000;
+    vertical-align: middle;
+    font:12px/24px "";
+}
+.main .denglu .seventh img{
+    border-radius: 3px;
+    margin-left:10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#foot{
+    height:38px;
+    border-top:3px solid #ff5482;
+    background:#555555;
+    margin-top:160px;
+}
+#foot .foot{
+    width:1080px;
+    height:38px;
+}
+#foot .foot ul{
+    width:747px;
+    height:25px;
+    padding-top:13px;
+    margin:0 auto;
+}
+#foot .foot ul li{
+    float:left;
+    height:12px;
+    padding:0 10px;
+    border-right:1px solid #dddddd;
+}
+#foot .foot ul li a{
+    color:#ddd;
+    display:block;
+    font: 12px/12px "";
+}
+#foot .foot ul .last{
+    border:0;
+}
+#bottom{
+    height:102px;
+    text-align:center;
+}
+#bottom p{
+    margin-top:15px;
+}
+
+
+

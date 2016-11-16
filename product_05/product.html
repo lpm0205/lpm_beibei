@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/public.css"/>
+    <script type="text/javascript" src="../public/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../public/jquery.fly.js"></script>
+    <script type="text/javascript" src="../public/requestAnimationFrame.js"></script>
+    <script type="text/javascript" src="../public/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../public/commonCookie.js"></script>
+    <script type="text/javascript" src="js/j1.js"></script>
+    <script type="text/javascript" src="js/jj.js"></script>
+    <script type="text/javascript" src="js/Ajax.js"></script>
+
+</head>
+<body style="height:2000px;">
+<!--头部-->
+<div id="top">
+    <div class="top margin">
+        <div class="login">
+            您好,
+            <div style="display:inline-block" id="change">
+                <a id="denglu" href="../login_06/login.html">请登录</a>
+                <a id="zhuce" href="../register/register.html">免费注册</a>
+            </div>
+            <span>|</span>
+            <a id="shangjia" href="#">商家中心</a>
+            <span>|</span>
+            <a id="lianxi" href="#"><img src="img/ren.jpg"/>联系客服
+                <div id="ption_1"><img src="img/ren.jpg"/>帮助中心</div>
+            </a>
+            <span>|</span>
+            <a id="guanzhu" href="#">关注
+                <div id="ption_2"><img src="img/ma.png"/></div>
+            </a>
+
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div id="logo">
+    <div class="logo margin">
+        <a href="../index_01/index.html"><img src="img/logo.jpg"/></a>
+        <div>
+            <a href="#"><img src="img/logo1.jpg"/></a>
+            <a href="#"><img src="img/logo2.jpg"/></a>
+            <a href="#"><img src="img/logo3.jpg"/></a>
+            <a href="#"><img src="img/gouwuche.jpg"/></a>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div id="nav">
+    <div class="nav margin">
+        <ul id="u1">
+            <li class="first"><a href="#">首页</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">限量购</a></li>
+            <li><a href="#">正品保证</a></li>
+            <li><a href="#">手机客户端</a></li>
+        </ul>
+        <form>
+            <input id="search" style="color:#666;font-size:12px;" type="text" placeholder="搜索商品和品牌"/>
+            <img id="s1" src="img/search.jpg">
+            <img id="s2" src="img/s2.png">
+        </form>
+        <div id="json_fl">
+            <a id="fenlei" href="#">在售分类 <img src="img/xia.jpg"/></a>
+            <div id="msg">
+                <ul id="msg_l"></ul>
+                <ul id="msg_r"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主要-->
+<div id="center">
+    <!--购物车上面-->
+    <div class="c_top margin">
+        <a href="../index_01/index.html">首页 ></a>
+        <a href="#">首页 ></a>
+        <a href="#">婴童服装 ></a>
+        <span>恩恩熊 宝宝蓝色恩恩熊儿裙子秋天女童连衣裙童装公主裙新款女宝宝吧背心裙80265></span>
+        <p id="t_time"></p>
+    </div>
+    <!--购物车中间主要部分-->
+    <div class="c_buy margin">
+        <div id="big">
+            <img id="big_img" src="img/big1.jpg"/>
+        </div>
+        <div class="buy_glass">
+            <div class="buy_glass_top">
+                <div class="pro_big">
+                    <span id="fu">
+                        <img id="old" src="img/glass1.jpg"/>
+                        <p id="glass"></p>
+                    </span>
+                </div>
+
+                <div class="pro_small">
+                    <ul>
+                        <li><img src="img/small1.jpg"></li>
+                        <li><img src="img/small2.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buy_glass_bottom">
+                <span>收藏商品</span>
+            </div>
+        </div>
+        <div class="buy_area">
+            <h3 class="area_title">
+                <span>今日特卖</span>
+                <span id="mygood_name" style="font-size:18px;">欧芮儿2016秋装新款黄色宽松针织衫上衣</span>
+                <span style="display:block;font-size:10px;color:#754">简约版型 亲肤舒适面料 质感五金拉链针织衫女套头七分袖薄款t恤上衣短款</span>
+            </h3>
+            <div class="area_money">
+                <span>
+                    <em style="color:#ff5482;font-size:20px">￥</em>
+                    <em id="mygood_price" style="color:#ff5482;font-size:36px;">205.00</em>
+                </span>
+                <span style="display:inline-block;background:#7dca00;border:1px solid #66a600;font-size:12px;margin:0px 10px;color:#fff;">4.1折</span>
+                <span style="display:inline-block;background:#5c9dff;border:1px solid #4b8ff5;font-size:12px;margin:0px 10px;color:#fff;">包邮</span>
+                <span>市场价:￥
+                    <span>118.00</span>
+                </span>
+            </div>
+            <div class="area_main">
+                <!--运费-->
+                <div class="yunfei">
+                    <span class="part1">运费</span>
+                    <span class="part2">包邮（偏远地区除外）</span>
+                </div>
+                <!--优惠-->
+                <div class="youhui">
+                    <span class="part1">优惠</span>
+                    <span class="part2">购买后约返10个贝壳</span>
+                    <div id="part_p">那地方奶带你覅按电脑覅那地方奶毒奶粉Ian妇女大夫年底发</div>
+                </div>
+                <!--选择颜色-->
+                <div class="yanse">
+                    <span class="part1">颜色</span>
+                    <ul class="part2">
+                        <li><img src="img/small1.jpg"/><span>粉色</span></li>
+                        <li><img src="img/small2.jpg"/><span>灰色</span></li>
+                    </ul>
+                </div>
+                <!--尺码-->
+                <div class="chima">
+                    <span class="part1">尺码</span>
+                    <ul class="part2">
+                        <li>50</li>
+                        <li>60</li>
+                        <li>70</li>
+                        <li>80</li>
+                        <li>90</li>
+                    </ul>
+                </div>
+                <!--数量-->
+                <div class="num">
+                    <span class="part1">数量</span>
+                    <div class="part2">
+                        <input id="sub" type="button" value="-"/>
+                        <span id="txt">1</span>
+                        <input id="add" type="button" value="+"/>
+                    </div>
+                </div>
+                <p style="color:#f00;display:none;margin-left:50px;" id="num_tip">亲！请至少选择一件商品！</p>
+                <!--加入购物车-->
+                <div class="tocart">
+                    <a href="javascript:void(0);"  id="car">加入购物车</a>
+                    <a href="../buy_03/buy.html"  id="jiesuan">去结算</a>
+                    <div>继续购物</div>
+                </div>
+            </div>
+        </div>
+        <!--右侧产品介绍-->
+        <div class="buy_out">
+            <div class="bi_title">特卖品牌</div>
+            <div class="brands_histroy">
+                <p>
+                    <span class="small_title">品牌:</span>
+                    <span class="brand_name_now">恩恩熊</span>
+                </p>
+                <p>
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                </p>
+                <p>
+                    <span class="small_title">服务:</span>
+                </p>
+                <p class="from">本商品由品牌入驻商从广东省揭阳市发货， 并提供售后服务。</p>
+            </div>
+            <div class="grade">
+                <p>
+                    <span class="grade_title">品牌综合评分:</span>
+                    <span class="red_word">4.9</span>
+                </p>
+                <p>
+                    <span class="grade_title">发货速度评分:</span>
+                    <span class="red_word">4.9</span>
+                </p>
+                <p>
+                    <span class="grade_title">物流速度评分:</span>
+                    <span class="red_word">4.9</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--下面菜单栏-->
+    <div class="c_introduce margin">
+        <!--商品详情区域左侧区域-->
+        <ul class="main_content_left">
+            <!--商品详情------------------START-->
+            <li class="goods_details">
+                <div class="on_top_title">
+                    <ul class="on_top_nav">
+                        <li class="active_style">
+                            <i class="fa fa-file-photo-o"></i> 商品详情
+                        </li>
+                        <li>
+                            <i class="fa fa-thumbs-up"></i> 买家口碑
+                        </li>
+                        <li>
+                            <i class="fa fa-heart"></i> 猜你喜欢
+                        </li>
+                        <li>
+                            <i class="fa fa-phone-square"></i> 商品咨询
+                        </li>
+                        <li>
+                            <i class="fa fa-trophy"></i> 贝贝优势
+                        </li>
+                    </ul>
+                    <div class="hide_shopping_car">
+                        <a href="javascript:void(0);">立即抢购</a>
+                    </div>
+                </div>
+
+                <div class="main_star">
+                    <div class="goods_parameter">
+                        <h3>商品参数</h3>
+                        <ul class="goods_index">
+                            <li>
+                                <b>货号：</b>
+                                <span>90042</span>
+                            </li>
+                            <li>
+                                <b>品牌：</b>
+                                <span>恩恩熊</span>
+                            </li>
+                            <li>
+                                <b>材质：</b>
+                                <span>1005%棉</span>
+                            </li>
+                            <li>
+                                <b>默认快递：</b>
+                                <span>申通，圆通</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="m_goods_size">
+                        <h3>商品尺码</h3>
+                        <p>TIPS:</p>
+                        <p>1.请综合参考尺码表各项参数进行选购，以帮助您选择到更合适的尺码。</p>
+                        <p>2.贝贝“7天无理由退货”为您的购物做保障，请放心挑选尺码。</p>
+                        <div class="size_table">
+                            <div class="word_title">
+                                <span>尺码对照表</span>
+                                <span class="unit">单位:CM</span>
+                            </div>
+                            <div class="size_table_img"><img src="img/chimabiao.jpg" /></div>
+                        </div>
+                    </div>
+                    <h3 class="goods_details_part">商品详情</h3>
+                    <div class="goods_images">
+                        <img src="img/goods_list1.jpg" alt="" />
+                        <img src="img/goods_list2.jpg" alt="" />
+                        <img src="img/goods_list3.jpg" alt="" />
+                        <img src="img/goods_list4.jpg" alt="" />
+                        <img src="img/goods_list5.jpg" alt="" />
+                        <img src="img/goods_list6.jpg" alt="" />
+                        <img src="img/goods_list7.jpg" alt="" />
+                    </div>
+                </div>
+            </li>
+            <!--商品详情------------------END-->
+
+            <!--买家口碑-----------------------START-->
+            <li class="buyer">
+                <h3 class="buyer_praise">
+                    <i class="fa fa-thumbs-up"></i>&nbsp;买家口碑
+                    <span class="small_words">本商品由恩恩熊发货并提供售后服务</span>
+                </h3>
+                <img src="img/word.png" alt="" style="width: 870px;" />
+            </li>
+            <!--买家口碑-----------------------END-->
+            <!--猜你喜欢---------------------START-->
+            <li class="your_like">
+                <h3 class="buyer_praise">
+                    <i class="fa fa-heart"></i>&nbsp;猜你喜欢
+                </h3>
+                <div class="yl_goods">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you1.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you2.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you3.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                        <li style="border-right: none;">
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you4.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you5.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you6.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you7.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                        <li style="border-right: none;">
+                            <a href="">
+                                <div class="goods_Img"><img src="img/you8.jpg" /></div>
+                                <span class="goods_title_name">倍康(Baken)吸多多 纸尿裤XL50/L56/M62/S72片</span>
+												<span class="mln__price">
+													<span style="font-size: 14px; color: #ff5482;">¥</span>
+												<span style="margin-right: -9px; font-size: 24px; color: #ff5482;">52.</span>
+												<span style="font-size: 19px; margin: 0 6px 0 0 ; color: #ff5482;">90</span>
+												<span style="font-size: 15px; color: #999; text-decoration: line-through; margin-right: 10px;">¥129.00</span>
+												<span style="color: #999;">4.1折</span>
+												</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!--商品咨询-------------------------START-->
+            <li class="service">
+                <h3 class="buyer_praise">
+                    <i class="fa fa-phone-square"></i>&nbsp;商品咨询
+                    <div class="se_img"><img src="img/service.png" style="width: 870px;"/></div>
+                </h3>
+            </li>
+            <!--商品咨询-------------------------END-->
+            <!--贝贝优势-------------------------START-->
+            <li class="goodNess">
+                <h3 class="buyer_praise">
+                    <i class="fa fa-trophy"></i></i>&nbsp;贝贝优势
+                    <div class="gn_img"><img src="img/goodNess.png" style="width: 870px;"/></div>
+                </h3>
+            </li>
+            <!--贝贝优势-------------------------END-->
+        </ul>
+
+        <!--商品详情区域右侧区域相似推荐-->
+        <div class="main_content_right">
+            <div class="mcr_title">相似推荐</div>
+            <ul class="goods_list_li">
+                <li>
+                    <a href="">
+                        <img src="img/you9.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you10.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you11.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you12.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you13.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you14.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you15.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you16.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you17.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you18.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you1.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you2.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you3.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you4.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you5.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you6.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/you7.jpg" style="width: 150px; height: 150px;" />
+                    </a>
+                    <div class="gll_word">
+                        <span class="gll_goods_name">淘妮喜欢品牌婴儿鞋秋冬0-2岁皮鞋防滑学步鞋软底新生儿宝宝单鞋</span>
+										<span class="money_price">
+											<span class="money_sign">¥</span>15.00
+										</span>
+                        <span style="font-size: 15px; color: #999; text-decoration: line-through;">¥78</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="foot">
+    <div class="foot margin">
+        <ul class="u3">
+            <li><a href="">首页</a></li>
+            <li><a href="">关于贝贝</a></li>
+            <li><a href="">商家入驻</a></li>
+            <li><a href="">正品保证</a></li>
+            <li><a href="">人才招聘</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">手机客户端</a></li>
+            <li><a href="">客服在线</a></li>
+            <li class="last"><a href="">贝贝公益</a></li>
+        </ul>
+    </div>
+</div>
+<div id="bottom">
+    <p>浙ICP备12005806号 |
+        食品流通许可证：SP3301041510054925 |
+        出版物经营许可证：新出发零字第00086号</p>
+    <p>&copy;2014-2015
+        <a href="#">贝贝</a>
+        beibei.com，All Rights Reserved. 客服热线：400-668-0000</p>
+</div>
+<!--返回顶部-->
+
+    <div class="toTop">
+        <ul>
+            <li>购物车(0)
+                <span class="first nochange"><i class="fa fa-shopping-cart fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound shoppingCar_top">
+                    <div class="shoppingCarTop">
+                    <i class="fa fa-shopping-cart fa-lg" style="color: #FF5482;"></i>
+                    购物车是空的
+                    </div>
+                    <div class="shoppingCarCenter">赶快去挑选商品吧！</div>
+                    <div class="shoppingCarFooter">
+                        <p>小计:<span><b>￥0.00</b></span></p>
+                        <div class="buy_car">
+                            <i class="fa fa-shopping-cart fa-lg" style="color: #fff;"></i>
+                            <a href="#" style="color: #fff;">去购物车结算</a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+            <li>app
+                <span class="first nochange"><i class="fa fa-phone-square fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound app">
+                    <p>下载手机APP</p>
+                    <p>随时随地看上新</p>
+                    <img src="img/erwe.png"/>
+                </span>
+            </li>
+            <li><span class="first"><i class="fa fa-user fa-lg" style="color: #ff6473;">客服在线</i></span><span class="secound">客服在线</span></li>
+            <li><span class="first"><i class="fa fa-chevron-up fa-lg" style="color: #ff6473;">回到顶部</i></span><span class="secound">回到顶部</span></li>
+        </ul>
+    </div>
+
+</body>
+</html>

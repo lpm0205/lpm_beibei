@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>-->
+    <link rel="stylesheet" type="text/css" href="../public/public.css"/>
+    <script type="text/javascript" src="../public/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../public/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../public/commonCookie.js"></script>
+    <script type="text/javascript" src="js/j1.js"></script>
+    <script type="text/javascript" src="js/jj.js"></script>
+    <script type="text/javascript" src="js/Ajax.js"></script>
+</head>
+<body>
+<!--头部-->
+<div id="top">
+    <div class="top margin">
+        <div class="login">
+            您好,
+            <div style="display:inline-block" id="change">
+                <a id="denglu" href="../login_06/login.html">请登录</a>
+                <a id="zhuce" href="../register/register.html">免费注册</a>
+            </div>
+            <span>|</span>
+            <a id="shangjia" href="#">商家中心</a>
+            <span>|</span>
+            <a id="lianxi" href="#"><img src="img/ren.jpg"/>联系客服
+                <div id="ption_1"><img src="img/ren.jpg"/>帮助中心</div>
+            </a>
+            <span>|</span>
+            <a id="guanzhu" href="#">关注
+                <div id="ption_2"><img src="img/ma.png"/></div>
+            </a>
+
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div id="logo">
+    <div class="logo margin">
+        <a href="../index_01/index.html"><img src="img/logo.jpg"/></a>
+        <div>
+            <a href="#"><img src="img/logo1.jpg"/></a>
+            <a href="#"><img src="img/logo2.jpg"/></a>
+            <a href="#"><img src="img/logo3.jpg"/></a>
+            <a href="#"><img src="img/gouwuche.jpg"/></a>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div id="nav">
+    <div class="nav margin">
+        <ul id="u1">
+            <li class="first"><a href="#">首页</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">限量购</a></li>
+            <li><a href="#">正品保证</a></li>
+            <li><a href="#">手机客户端</a></li>
+        </ul>
+        <form>
+            <input id="search" style="color:#666;font-size:12px;" type="text" placeholder="搜索商品和品牌"/>
+            <img id="s1" src="img/search.jpg">
+            <img id="s2" src="img/s2.png">
+        </form>
+        <div id="json_fl">
+            <a id="fenlei" href="#">在售分类 <img src="img/xia.jpg"/></a>
+            <div id="msg">
+                <ul id="msg_l"></ul>
+                <ul id="msg_r"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--main-->
+<div id="main">
+    <div class="main_top margin">
+        <div class="m_type">
+            <span class="m_type_title">分类: </span>
+            <ul class="m_type_sort">
+                <li><a href="#">全部</a></li>
+                <li><a href="#">连衣裙</a></li>
+                <li><a href="#">套装</a></li>
+                <li><a href="#">套装裙</a></li>
+                <li><a href="#">针织衫</a></li>
+                <li><a href="#">风衣</a></li>
+                <li><a href="#">蕾丝衫/雪纺衫</a></li>
+                <li><a href="#">休闲套装</a></li>
+                <li><a href="#">衬衫</a></li>
+                <li><a href="#">小外套</a></li>
+                <li><a href="#">西装</a></li>
+                <li><a href="#">毛呢外套</a></li>
+                <li><a href="#">毛衣</a></li>
+                <li><a href="#">马甲</a></li>
+                <li><a href="#">皮衣</a></li>
+                <li><a href="#">休闲裤运动裤</a></li>
+                <li><a href="#">半身裙</a></li>
+
+            </ul>
+        </div>
+        <div class="m_brand">
+            <span style="float:left;">品牌</span>
+            <div class="m_brand_img">
+                <ul class="m_brand_img_box">
+                    <li><img src="body/brands1.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands2.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands3.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands4.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands5.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands6.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands7.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands8.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands9.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands10.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands11.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands12.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands13.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands14.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands15.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands16.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands17.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands18.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands19.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands20.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands1.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands2.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands3.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands4.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands5.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+                    <li><img src="body/brands6.jpg"><span class="brand_name">怡妍宝贝/Eyanbaby</span></li>
+
+                </ul>
+            </div>
+            <a class="m_brand_more" href="javascript:void(0);">更多<i class="jiantou"></i></a>
+
+        </div>
+        <div class="m_title">
+            <span style="float:left;">排序</span>
+            <ul class="renqi">
+                <li><input type="checkbox"/>有货</li>
+                <li><a style="background:#FF4965;color:#fff;" href="#">人气</a></li>
+                <li><a href="#">价格</a></li>
+                <li><a href="#">折扣</a></li>
+            </ul>
+        </div>
+    </div>
+    <ul style="margin-top:10px;" class="main_pro margin">
+        <li>
+            <span class="images"><img src="img/fuzhuang.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang1.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang2.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang3.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang4.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang5.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang6.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang7.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+
+        <li>
+            <span class="images"><img src="img/fuzhuang8.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+
+        <li>
+            <span class="images"><img src="img/fuzhuang9.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang10.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+        <li>
+            <span class="images"><img src="img/fuzhuang11.jpg"/></span>
+            <div class="p">蓝色紫檀气质清新宽松H版型上衣条纹衬衫女长袖</div>
+            <span class="logo">￥</span>
+            <span class="money">78.</span>
+            <span class="money2">00</span>
+            <span class="old">￥378.00</span>
+            <span class="dazhe">2折</span>
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="foot">
+    <div class="foot margin">
+        <ul class="u3">
+            <li><a href="">首页</a></li>
+            <li><a href="">关于贝贝</a></li>
+            <li><a href="">商家入驻</a></li>
+            <li><a href="">正品保证</a></li>
+            <li><a href="">人才招聘</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">手机客户端</a></li>
+            <li><a href="">客服在线</a></li>
+            <li class="last"><a href="">贝贝公益</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="bottom">
+    <p>浙ICP备12005806号 |
+        食品流通许可证：SP3301041510054925 |
+        出版物经营许可证：新出发零字第00086号</p>
+    <p>&copy;2014-2015
+        <a href="#">贝贝</a>
+        beibei.com，All Rights Reserved. 客服热线：400-668-0000</p>
+</div>
+<!--返回顶部-->
+
+    <div class="toTop">
+        <ul>
+            <li>购物车
+                <span class="first nochange"><i class="fa fa-shopping-cart fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound shoppingCar_top">
+                    <div class="shoppingCarTop">
+                    <i class="fa fa-shopping-cart fa-lg" style="color: #FF5482;"></i>
+                    购物车是空的
+                    </div>
+                    <div class="shoppingCarCenter">赶快去挑选商品吧！</div>
+                    <div class="shoppingCarFooter">
+                        <p>小计:<span><b>￥0.00</b></span></p>
+                        <div class="buy_car">
+                            <i class="fa fa-shopping-cart fa-lg" style="color: #fff;"></i>
+                            <a href="#" style="color: #fff;">去购物车结算</a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+            <li>app
+                <span class="first nochange"><i class="fa fa-phone-square fa-lg" style="color: #ff6473;"></i></span>
+                <span class="secound app">
+                    <p>下载手机APP</p>
+                    <p>随时随地看上新</p>
+                    <img src="img/erwe.png"/>
+                </span>
+            </li>
+            <li><span class="first"><i class="fa fa-user fa-lg" style="color: #ff6473;">客服在线</i></span><span class="secound">客服在线</span></li>
+            <li><span class="first"><i class="fa fa-chevron-up fa-lg" style="color: #ff6473;">回到顶部</i></span><span class="secound">回到顶部</span></li>
+        </ul>
+    </div>
+
+</body>
+</html>
